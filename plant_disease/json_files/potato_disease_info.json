@@ -1,0 +1,29 @@
+{
+    "Potato___Early_blight": {
+        "description": "Early blight causes concentric dark brown spots on leaves and stems, leading to defoliation.",
+        "cause": "Fungal infection caused by Alternaria solani.",
+        "prevention": "Rotate crops, avoid overhead watering, and plant resistant varieties.",
+        "cure": "Apply fungicides such as mancozeb or chlorothalonil.",
+        "resources": [
+            "https://www.extension.org/pages/18456/early-blight-of-potato",
+            "https://plantvillage.psu.edu"
+        ]
+    },
+    "Potato___Late_blight": {
+        "description": "Late blight affects leaves and tubers with water-soaked lesions that turn brown and black.",
+        "cause": "Oomycete pathogen Phytophthora infestans.",
+        "prevention": "Use certified seed potatoes and resistant varieties; avoid humid conditions.",
+        "cure": "Apply fungicides like mefenoxam and copper-based treatments.",
+        "resources": [
+            "https://www.apsnet.org/edcenter/disandpath/oomycete/pdlessons/Pages/LateBlight.aspx",
+            "https://plantvillage.psu.edu"
+        ]
+    },
+    "Potato___healthy": {
+        "description": "The potato plant is healthy and shows no signs of disease or infection.",
+        "cause": "No presence of pathogens or abiotic stress.",
+        "prevention": "Ensure proper spacing, nutrition, and pest monitoring.",
+        "cure": "N/A",
+        "resources": []
+    }
+}

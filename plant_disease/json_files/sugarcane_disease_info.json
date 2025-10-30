@@ -1,0 +1,59 @@
+{
+    "BacterialBlights": {
+        "description": "Bacterial blight causes reddish-brown streaks on leaves and can affect crop yield.",
+        "cause": "Xanthomonas albilineans bacterium.",
+        "prevention": "Plant disease-free cane and avoid mechanical injury.",
+        "cure": "Use hot water treatment and resistant varieties.",
+        "resources": [
+            "https://www.cabi.org/isc/datasheet/56837",
+            "https://www.agrifarming.in"
+        ]
+    },
+    "Healthy": {
+        "description": "The sugarcane plant is healthy and shows no visible symptoms of disease.",
+        "cause": "Absence of pathogens or environmental stress.",
+        "prevention": "Maintain proper field hygiene and good farming practices.",
+        "cure": "N/A",
+        "resources": []
+    },
+    "Mosaic": {
+        "description": "Sugarcane mosaic causes mottled green and yellow patterns on leaves, stunting growth.",
+        "cause": "Sugarcane mosaic virus (SCMV), transmitted by aphids.",
+        "prevention": "Use virus-free planting material and control aphid vectors.",
+        "cure": "No direct cure; remove infected plants and control aphids.",
+        "resources": [
+            "https://www.cabi.org/isc/datasheet/49433",
+            "https://plantvillage.psu.edu"
+        ]
+    },
+    "RedRot": {
+        "description": "Red rot is a severe fungal disease that discolors internal cane tissues and weakens the plant.",
+        "cause": "Colletotrichum falcatum fungus.",
+        "prevention": "Grow resistant varieties and avoid water stagnation.",
+        "cure": "Remove infected canes and apply recommended fungicides.",
+        "resources": [
+            "https://www.ikisan.com/sugarcane-red-rot.html",
+            "https://www.agrifarming.in"
+        ]
+    },
+    "Rust": {
+        "description": "Rust causes orange to brown pustules on leaves, leading to leaf drying and reduced yield.",
+        "cause": "Puccinia melanocephala fungus.",
+        "prevention": "Avoid planting susceptible varieties and ensure field sanitation.",
+        "cure": "Use fungicides like triadimefon and grow resistant varieties.",
+        "resources": [
+            "https://www.cabi.org/isc/datasheet/49366",
+            "https://plantvillage.psu.edu"
+        ]
+    },
+    "Yellow": {
+        "description": "Yellow leaf syndrome causes leaf yellowing starting from the midrib, progressing outward.",
+        "cause": "Sugarcane yellow leaf virus (ScYLV), spread by aphids.",
+        "prevention": "Control aphids and use healthy planting materials.",
+        "cure": "No known cure; remove affected plants and manage vectors.",
+        "resources": [
+            "https://www.agrifarming.in",
+            "https://www.cabi.org/isc/datasheet/113308"
+        ]
+    }
+}

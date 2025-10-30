@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plant Disease Detection</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #0b3d0b, #134e13);
+      color: #e0ffe0;
+    }
+
+    .navbar {
+      background-color: #1e4620;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #d4edda;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #d4edda;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #c0ff66;
+    }
+
+    h2 {
+      color: #c0ff66;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 32px;
+    }
+
+    form {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 50px;
+      border-radius: 24px;
+      background: rgba(20, 40, 20, 0.4);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-group {
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.5s ease;
+    }
+
+    .form-group.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .flex-row {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    label {
+      display: inline-block;
+      padding: 15px 30px;
+      border: 2px solid #4caf50;
+      border-radius: 14px;
+      color: #d4edda;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 18px;
+      min-width: 150px;
+      text-align: center;
+    }
+
+    label:hover {
+      background-color: #2f7332;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #28a745;
+      color: #fff;
+      border-color: #1e7e34;
+    }
+
+    input[type="file"] {
+      font-size: 16px;
+      color: #fff;
+      background-color: transparent;
+      border: 2px dashed #4caf50;
+      padding: 10px;
+      border-radius: 12px;
+      width: 100%;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      display: block;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      background-color: #1c1f1c;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: auto;
+      border-top: 1px solid #2e4630;
+      color: #cfeecf;
+    }
+
+    footer h2 {
+      color: #90ee90;
+      font-size: 24px;
+    }
+
+    footer p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>Plant Disease Detector</h1>
+    <div class="nav-links">
+      <a href="#about">About Us</a>
+      <a href="{{ url_for('team') }}">Team</a>
+    </div>
+  </div>
+
+  <!-- Form Header -->
+  <h2>🌿 Plant Disease Detection 🌿</h2>
+
+  <!-- Form -->
+  <form action="/predict" method="POST" enctype="multipart/form-data">
+    <!-- Dataset Selection -->
+    <div class="form-group visible" id="dataset-group">
+      <div class="flex-row">
+        <div>
+          <input type="radio" id="dataset-tomato" name="dataset" value="Tomato">
+          <label for="dataset-tomato">Tomato</label>
+        </div>
+        <div>
+          <input type="radio" id="dataset-potato" name="dataset" value="Potato">
+          <label for="dataset-potato">Potato</label>
+        </div>
+        <div>
+          <input type="radio" id="dataset-sugarcane" name="dataset" value="Sugarcane">
+          <label for="dataset-sugarcane">Sugarcane</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model Selection -->
+    <div class="form-group" id="model-group">
+      <div class="flex-row" id="model-options"></div>
+    </div>
+
+    <!-- Image Upload -->
+    <div class="form-group" id="image-upload">
+      <input type="file" name="image" accept="image/*" required>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group" id="submit-group">
+      <button type="submit" class="btn">🌱 Predict</button>
+    </div>
+  </form>
+
+  <!-- Footer -->
+  <footer id="about">
+    <h2>About Us</h2>
+    <p>We are a team dedicated to helping farmers detect plant diseases early using AI and deep learning. Our platform is trained on Tomato, Potato, and Sugarcane datasets for accurate, fast results.</p>
+  </footer>
+
+  <!-- Script to handle dynamic visibility -->
+  <script>
+    const datasetRadios = document.querySelectorAll('input[name="dataset"]');
+    const modelGroup = document.getElementById('model-group');
+    const modelOptions = document.getElementById('model-options');
+    const imageUploadGroup = document.getElementById('image-upload');
+    const submitGroup = document.getElementById('submit-group');
+    const imageInput = imageUploadGroup.querySelector('input[type="file"]');
+
+    const models = {
+      Tomato: ['ResNet', 'DenseNet', 'Inception', 'InceptionResNet', 'VGG'],
+      Potato: ['MobileNet', 'ResNet', 'SVM', 'Random Forest'],
+      Sugarcane: ['MobileNet', 'ResNet', 'SVM', 'Random Forest']
+    };
+
+    // Hide image and submit by default
+    imageUploadGroup.classList.remove('visible');
+    submitGroup.classList.remove('visible');
+
+    datasetRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        modelGroup.classList.add('visible');
+        modelOptions.innerHTML = '';
+        imageUploadGroup.classList.remove('visible');
+        submitGroup.classList.remove('visible');
+
+        const selected = radio.value;
+        models[selected].forEach(model => {
+          const id = `model-${model.replace(/\s+/g, '').toLowerCase()}`;
+          modelOptions.innerHTML += `
+            <div>
+              <input type="radio" id="${id}" name="model" value="${model}">
+              <label for="${id}">${model}</label>
+            </div>`;
+        });
+
+        // Add event listeners for model radios
+        document.querySelectorAll('input[name="model"]').forEach(modelRadio => {
+          modelRadio.addEventListener('change', () => {
+            imageUploadGroup.classList.add('visible');
+            submitGroup.classList.remove('visible');
+            imageInput.value = ''; // Reset file input
+          });
+        });
+      });
+    });
+
+    // Show submit button only after file is selected
+    imageInput.addEventListener('change', () => {
+      if (imageInput.files.length > 0) {
+        submitGroup.classList.add('visible');
+      } else {
+        submitGroup.classList.remove('visible');
+      }
+    });
+  </script>
+
+</body>
+</html>

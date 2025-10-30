@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Team | EPICS Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0b3d0b, #134e13);
+      color: #e0ffe0;
+    }
+
+    .navbar {
+      background-color: #1e4620;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #d4edda;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .nav-links a {
+      color: #d4edda;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #c0ff66;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #c0ff66;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 20px;
+      color: #a0ffa0;
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 50px;
+      justify-items: center;
+    }
+
+    .card {
+      
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #4caf50;
+    }
+
+    .card h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: #d4edda;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #cceccc;
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background-color: #1c1f1c;
+      text-align: center;
+      color: #cfeecf;
+      border-top: 1px solid #2e4630;
+    }
+
+    footer a {
+      color: #90ee90;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h1>Our Team</h1>
+    <div class="nav-links">
+      <a href="{{ url_for('index') }}">Home</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Crop Disease Detection and Yield Prediction using Computer Visioning</h2>
+    <h3>EPICS Project Team</h3>
+
+    <div class="team-grid">
+      <div class="card">
+        <img src="static/images/team/aviral.png" alt="Aviral Jain">
+        <h4>Aviral Jain</h4>
+        <p>22BCE10285</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/akarsh.png" alt="Akarsh Jain">
+        <h4>Akarsh Jain</h4>
+        <p>22BET10008</p>
+      </div>
+      <div class="card">
+        <img src="static\images\team\Subhajit.jpg" alt="Subhajit Chakraborty">
+        <h4>Subhajit Chakraborty</h4>
+        <p>22BCE10501</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/satya.png" alt="Satya Sagar Nagesh">
+        <h4>Satya Sagar Nagesh</h4>
+        <p>22BCY10051</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/rupesh.png" alt="Rupesh Soni">
+        <h4>Rupesh Ajitkumar Soni</h4>
+        <p>22BCE10609</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/pratap.png" alt="Pratap Kumar">
+        <h4>Pratap Kumar</h4>
+        <p>22BCE11558</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/mayank.png" alt="Mayank Raj Singh">
+        <h4>Mayank Raj Singh</h4>
+        <p>22BSA10053</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/aditya.png" alt="Aditya Raj">
+        <h4>Aditya Raj</h4>
+        <p>22BSA10171</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/anshika.png" alt="Anshika Mishra">
+        <h4>Anshika Mishra</h4>
+        <p>22BCE10635</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/mahek.png" alt="Mahek Singhal">
+        <h4>Mahek Singhal</h4>
+        <p>22BCE11322</p>
+      </div>
+      <div class="card">
+        <img src="static/images/team/ankita.png" alt="Ankita Garg">
+        <h4>Ankita Garg</h4>
+        <p>22BCE11273</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by our Team | <a href="index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>

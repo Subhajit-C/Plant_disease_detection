@@ -1,0 +1,102 @@
+{
+    "Bacterial_spot": {
+        "description": "Bacterial spot is a bacterial infection that causes small, water-soaked lesions on leaves and fruits.",
+        "cause": "The disease is caused by the bacterium Xanthomonas spp.",
+        "prevention": "Use resistant varieties, avoid overhead irrigation, and practice crop rotation.",
+        "cure": "Use copper-based fungicides or bactericides.",
+        "resources": [
+            "https://www.crops.org/plant-diseases",
+            "https://www.extension.org/"
+        ]
+    },
+    "Early_blight": {
+        "description": "Early blight is caused by the fungus Alternaria solani, leading to dark, concentric ring lesions on leaves.",
+        "cause": "Fungal infection from Alternaria solani.",
+        "prevention": "Plant resistant varieties, maintain good air circulation, and avoid overhead watering.",
+        "cure": "Apply fungicides such as chlorothalonil or mancozeb.",
+        "resources": [
+            "https://www.agriculturalextension.com",
+            "https://www.plantpathology.extension.org/"
+        ]
+    },
+    "Healthy": {
+        "description": "The plant is healthy with no visible symptoms of any diseases.",
+        "cause": "No pathogens or environmental stress.",
+        "prevention": "Maintain good agricultural practices for overall plant health.",
+        "cure": "N/A",
+        "resources": []
+    },
+    "Late_blight": {
+        "description": "Late blight is a fungal disease caused by Phytophthora infestans, affecting leaves and fruits with brown lesions.",
+        "cause": "Phytophthora infestans fungus.",
+        "prevention": "Use resistant varieties and avoid wet conditions for long periods.",
+        "cure": "Apply fungicides like mefenoxam and metalaxyl.",
+        "resources": [
+            "https://www.crops.org",
+            "https://www.extension.org"
+        ]
+    },
+    "Leaf_Mold": {
+        "description": "Leaf mold is caused by the fungus Passalora fulva, which leads to the development of yellow spots on leaves, especially in the lower part of the plant.",
+        "cause": "Fungal infection from Passalora fulva.",
+        "prevention": "Remove infected leaves, maintain good air circulation, and avoid wetting foliage.",
+        "cure": "Use fungicides like azoxystrobin or chlorothalonil.",
+        "resources": [
+            "https://www.extension.org/",
+            "https://www.planetnatural.com/"
+        ]
+    },
+    "Septoria_leaf_spot": {
+        "description": "Septoria leaf spot is caused by the fungus Septoria lycopersici, characterized by small, dark lesions with yellow halos on tomato leaves.",
+        "cause": "Fungal infection from Septoria lycopersici.",
+        "prevention": "Avoid overhead irrigation, remove infected leaves, and use disease-free seeds.",
+        "cure": "Apply fungicides such as chlorothalonil or copper-based solutions.",
+        "resources": [
+            "https://www.crops.org/plant-diseases",
+            "https://www.extension.org"
+        ]
+    },
+    "Two_spotted_spider_mite": {
+        "description": "The two-spotted spider mite causes yellowing of leaves and webbing on the plant.",
+        "cause": "Spider mites, specifically Tetranychus urticae.",
+        "prevention": "Use natural predators like ladybugs or apply insecticidal soap.",
+        "cure": "Insecticidal miticides or a strong spray of water can reduce the mite population.",
+        "resources": [
+            "https://www.crops.org/plant-diseases",
+            "https://www.extension.org"
+        ]
+    },
+    "Target_spot": {
+        "description": "Target spot is caused by the fungus Corynespora cassiicola, leading to circular lesions on the leaves.",
+        "cause": "Fungal infection from Corynespora cassiicola.",
+        "prevention": "Use resistant varieties, improve plant spacing, and avoid waterlogging.",
+        "cure": "Fungicides like mancozeb or chlorothalonil can help control the disease.",
+        "resources": [
+            "https://www.crops.org/plant-diseases",
+            "https://www.extension.org"
+        ]
+    },
+    "Tomato_mosaic_virus": {
+        "description": "Tomato mosaic virus (ToMV) causes mottling and distortion of tomato leaves and fruits.",
+        "cause": "Viral infection caused by the Tomato mosaic virus.",
+        "prevention": "Use virus-free seeds and resistant varieties, and eliminate infected plants.",
+        "cure": "No cure; control involves managing symptoms and removing infected plants.",
+        "resources": [
+            "https://www.crops.org/plant-diseases",
+            "https://www.extension.org"
+        ]
+    },
+    "Tomato_yellow_leaf_curl_virus": {
+        "description": "Tomato yellow leaf curl virus (TYLCV) causes yellowing of leaves, stunting, and reduced fruit production.",
+        "cause": "Viral infection transmitted by whiteflies.",
+        "prevention": "Control whitefly populations and use resistant tomato varieties.",
+        "cure": "No cure; use resistant varieties and manage whitefly infestations.",
+        "resources": [
+            "https://www.crops.org/plant-diseases",
+            "https://www.extension.org"
+        ]
+    }
+}
+
+
+
